@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Page1 from './Page1';
+import Page2 from './Page2';
 import './App.css';
 
 
@@ -27,13 +28,10 @@ import './App.css';
 
 class App extends Component {
   render () {
-    // const posts = this.state.posts.map( post=> {
-    //   return <Post title={post.title} />
-    // });
-
     return (
       <div>
         <Page1 />
+        <Page2 />
       </div>
     );
   } 

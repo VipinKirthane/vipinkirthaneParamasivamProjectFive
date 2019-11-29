@@ -29,15 +29,12 @@
   width:80%;
   margin:0 auto;
 }
-
-
+.page1 {
+  height:100vh;
+}
 
 .mainOptions {
-  /* height:400px;
-  width:200px; */
-  /* border:1px solid darkcyan; */
   text-align: center;
-  /* display:inline-block; */
   margin-top:100px;
 }
 
@@ -71,4 +68,21 @@ h1 {
 
 .thirdOption {
   background-color: darkslateblue;
+}
+
+
+/* Page2 Edits */
+.page2 {
+  min-height:100vh;
+}
+
+.pageTwoElements {
+  height:300px;
+  width:200px;
+  border-radius: 5px;
+  color:white;
+  text-align: center;
+  margin:0 auto;
+  margin-top:200px;
+  background-color:darkslategray;
 }
