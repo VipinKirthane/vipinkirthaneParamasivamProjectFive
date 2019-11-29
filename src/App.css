@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+
+/* My edit */
+
+.wrapper {
+  max-width:1200px;
+  width:80%;
+  margin:0 auto;
+}
+
+
+
+.mainOptions {
+  /* height:400px;
+  width:200px; */
+  /* border:1px solid darkcyan; */
+  text-align: center;
+  /* display:inline-block; */
+  margin-top:100px;
+}
+
+h1 {
+  text-align: center;
+  color:darkslateblue;
+}
+
+.firstOption, .secondOption, .thirdOption {
+  /* height:400px; */
+  width:250px;
+  color:white;
+  background-color:beige;
+  margin: 0 40px;
+  display:inline-block;
+  padding-top:200px;
+  padding-bottom:200px;
+  border-radius: 5px;
+  font-size:20px;
+}
+
+.firstOption {
+  background-color:darkslategray;
+  padding-top:200px;
+  padding-bottom:200px;
+}
+
+.secondOption {
+  background-color: firebrick;
+}
+
+.thirdOption {
+  background-color: darkslateblue;
+}
