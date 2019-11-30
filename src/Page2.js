@@ -11,7 +11,7 @@ class Page2 extends Component {
     render () {
         return (
             <div className="page2">
-                <div className="pageTwoElements wrapper">
+                {/* <div className="pageTwoElements wrapper">
                     <h2>
                         {this.state.rocketFakeList.map((props) => { 
                             return <h2 name={props}
@@ -19,7 +19,9 @@ class Page2 extends Component {
                     </h2>
                     <p>Launch Date:######</p>
                     <div className="rocketListing">PIC #</div>
-                </div>
+                </div> */}
+
+                <h2>{this.state.rocketFakeList}</h2>
             </div>
         )
     }

@@ -27,10 +27,37 @@ import './App.css';
 //   }
 
 class App extends Component {
+  // 1.Initializing the state
+  constructor() {
+    super();
+    this.state = {
+      rockets: []
+    }
+  }
+
+  // 2. For axios call
+  componentDidMount() {
+    axios({
+      url:'https://api.spacexdata.com/v3/launches/past',
+      method: 'GET',
+      dataResponse: 'json'
+    }).then( (response)=> {
+      const rocketShit = [...response.data];
+      this.setState({
+        rockets: rocketShit,
+      })
+      console.log(this.state.rockets);
+    });
+  }
+
+
   render () {
+
+    // let rocketListShit = response;
     return (
       <div>
         <Page1 />
+          {/* <h2>{rocketListShit}</h2> */}
         <Page2 />
       </div>
     );
