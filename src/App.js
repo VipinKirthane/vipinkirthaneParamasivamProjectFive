@@ -11,14 +11,28 @@ class App extends Component {
     super();
     this.state = {
       rockets: [],
+      showPage2: false,
+      showPage3: false,
     }
     // this.click = this.click.bind(this);
     // above
   }
 
+  hidingPage2 = () => {
+    this.setState({
+      showPage2: true,
+    })
+  }
+
+  hidingPage3 = () => {
+    this.setState({
+      showPage3: true,
+    })
+  }
+
   // 2. For axios call
   componentDidMount() {
-
+    // <Page2 />
   }
 
   // Latest Launches
@@ -29,11 +43,18 @@ class App extends Component {
       dataResponse: 'json'
     }).then((response) => {
       console.log(response.data.launch_year);
+      // const latestLaunchesList = ({flight_number, mission_name, launch_year}) => {
+      //   console.log(`The flight number is ${flight_number}, mission name is ${mission_name} and launch year is ${launch_year}`);
+      // }
+      // latestLaunchesList(response.data[0]);
+
       this.setState({
         rockets: response.data,
       })
     });
   }
+
+
 
   // Past Launches
   rocketSelectionHandlerPastLaunches = () => {
@@ -69,18 +90,66 @@ class App extends Component {
         <div className="page1">
           <h1>Space X Rocket Portfolio</h1>
           <main className="mainOptions wrapper">
-            <div><button className="firstOption" onClick={this.rocketSelectionHandlerLatestLaunches}>
-              LATEST LAUNCHES{this.state.rockets.flight_number}</button></div>
 
-            <div><button className="secondOption" onClick={this.rocketSelectionHandlerPastLaunches}>
-              PAST LAUNCHES{this.state.rockets.tbd}</button></div>
+            {
+            this.state.hidingPage2 ?
+              <div><button
+                className="firstOption"
+                onClick={() => this.rocketSelectionHandlerLatestLaunches, this.hidingPage2}>
+                LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
+                : null
+            }
 
-            <div><button className="thirdOption" onClick={this.rocketSelectionHandlerUpcomingLaunches}>
-              UPCOMING LAUNCHES{this.state.rockets.flight_number}</button></div>
+            <div><button
+              className="firstOption"
+              onClick={() => this.rocketSelectionHandlerLatestLaunches, this.hidingPage2}>
+              LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
+
+
+            {
+              this.state.hidingPage2 ?
+              <div><button
+                className="secondOption"
+                onClick={() => this.rocketSelectionHandlerPasLaunches, this.hidingPage2}>
+                PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
+              : null
+            }
+
+
+            <div><button
+            className="secondOption"
+            onClick={() => this.rocketSelectionHandlerPastLaunches, this.hidingPage2}>
+              PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
+
+            <div><button
+            className="thirdOption"
+            onClick={() => this.rocketSelectionHandlerUpcomingLaunches, this.hidingPage2}>
+              UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
           </main>
         </div>
-        <Page2 />
-        <Page3 />
+
+      {
+      this.state.showPage2 ?
+        <div >
+          <Page2 />
+        </div>
+        :
+        null
+      }
+
+        {
+          this.state.showPage3 ?
+            <div >
+              <Page3 />
+            </div>
+            :
+            null
+        }
+
+
+
+
+        {/* <Page3 /> */}
       </div>
     );
   }

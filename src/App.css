@@ -14,6 +14,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 /* My edit */
 
+html {
+  font-size:62.5%;
+}
+
 .wrapper {
   max-width:1200px;
   width:80%;
@@ -21,8 +25,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 }
 .page1 {
   height:99vh;
-  background-image: url('./backgroundImagePage1.png');
+  background-image: url('./backgroundImagePage1.jpg');
   background-position: center;
+  background-size:cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -35,7 +40,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 h1 {
   text-align: center;
-  color:darkslateblue;
+  font-size:4rem;
+  letter-spacing: 3px;
+  color:whitesmoke;
   margin:0;
   padding-top:100px;
 }
@@ -43,8 +50,8 @@ h1 {
 .firstOption, .secondOption, .thirdOption {
   /* height:400px; */
   border:none;
-  width:250px;
-  color:white;
+  width:300px;
+  /* color:white; */
   background-color:beige;
   margin: 0 40px;
   display:inline-block;
@@ -59,14 +66,22 @@ h1 {
   background-color:darkslategray;
   padding-top:200px;
   padding-bottom:200px;
+  background-image: url("./latestLaunches.gif");
+  background-position: center;
 }
 
 .secondOption {
   background-color: firebrick;
+  background-image: url("./pastLaunches.gif");
+  background-position: center;
+  color:white;
 }
 
 .thirdOption {
   background-color: darkslateblue;
+  background-image: url("./upcomingRocket.gif");
+  background-position: center;
+  color:white;
 }
 
 
@@ -93,7 +108,7 @@ h1 {
 
 /* Page3 Edits */
 .page3 {
-  height:99vh;
+  height:100vh;
   background-color:lightseagreen;
   color:darkmagenta;
 }
@@ -108,7 +123,7 @@ h3 {
 .leftHalfPage3 {
   width:calc(50% - 10px);
   background-color:rebeccapurple;
-  height:800px;
+  height:80vh;
   float:left;
   margin-right:10px;
 }
@@ -116,7 +131,7 @@ h3 {
 .rightHalfPage3 {
   width:calc(50% - 10px);
   margin-left:10px;
-  height:800px;
+  height:80vh;
   float:left;
   background-color:blanchedalmond;
 }
