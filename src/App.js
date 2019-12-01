@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link, animateScroll as scroll } from "react-scroll";
 import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
@@ -87,44 +88,79 @@ class App extends Component {
   render () {
     return (
       <div>
-        <div className="page1">
+        <div className="page1" id="mainLink">
           <h1>Space X Rocket Portfolio</h1>
           <main className="mainOptions wrapper">
 
-            {
+            {/* {
             this.state.hidingPage2 ?
               <div><button
                 className="firstOption"
                 onClick={() => this.rocketSelectionHandlerLatestLaunches, this.hidingPage2}>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
                 : null
-            }
-
-            <div><button
-              className="firstOption"
-              onClick={() => this.rocketSelectionHandlerLatestLaunches, this.hidingPage2}>
-              LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
+            } */}
 
 
-            {
+            <Link
+              activeClass="active"
+              to="page2Link"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <div><button
+                className="firstOption"
+                onClick={() => this.rocketSelectionHandlerLatestLaunches, this.hidingPage2}>
+                LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
+            </Link>
+
+            {/* {
               this.state.hidingPage2 ?
               <div><button
                 className="secondOption"
-                onClick={() => this.rocketSelectionHandlerPasLaunches, this.hidingPage2}>
+                onClick={() => this.rocketSelectionHandlerPastLaunches, this.hidingPage2}>
                 PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
               : null
-            }
+            } */}
 
+            <Link
+              activeClass="active"
+              to="page2Link"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <div><button
+              className="secondOption"
+              onClick={() => this.rocketSelectionHandlerPastLaunches, this.hidingPage2}>
+                PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
+            </Link>
 
-            <div><button
-            className="secondOption"
-            onClick={() => this.rocketSelectionHandlerPastLaunches, this.hidingPage2}>
-              PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
+            {/* {
+              this.state.hidingPage2 ?
+                <div><button
+                  className="thirdOption"
+                  onClick={() => this.rocketSelectionHandlerUpcomingLaunches, this.hidingPage2}>
+                  UPCOMING LAUNCHES{this.state.rockets.rocket_id}</button></div>
+                : null
+            } */}
 
-            <div><button
-            className="thirdOption"
-            onClick={() => this.rocketSelectionHandlerUpcomingLaunches, this.hidingPage2}>
-              UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
+            <Link
+              activeClass="active"
+              to="page2Link"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <div><button
+              className="thirdOption"
+              onClick={() => this.rocketSelectionHandlerUpcomingLaunches, this.hidingPage2}>
+                UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
+            </Link>
           </main>
         </div>
 

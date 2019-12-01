@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
 class Page3 extends Component {
+
+
     render () {
         return (
-            <section className="page3">
+            <section className="page3" id="page3Link">
                 <div className="wrapper">
                     <h3>Rocket 1: Name</h3>
                     <div className="leftHalfPage3">
