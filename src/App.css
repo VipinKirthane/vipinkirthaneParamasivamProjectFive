@@ -25,7 +25,7 @@ html {
 }
 .page1 {
   height:100vh;
-  background-image: url('./backgroundImagePage1.jpg');
+  background-image: url('./assets/backgroundImagePage1.jpg');
   background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
@@ -64,20 +64,20 @@ h1 {
 
 .firstOption {
   background-color:darkslategray;
-  background-image: url("./latestLaunches.gif");
+  background-image: url("./assets/latestLaunches.gif");
   background-position: center;
 }
 
 .secondOption {
   background-color: firebrick;
-  background-image: url("./pastLaunches.gif");
+  background-image: url("./assets/pastLaunches.gif");
   background-position: center;
   color:white;
 }
 
 .thirdOption {
   background-color: darkslateblue;
-  background-image: url("./upcomingRocket.gif");
+  background-image: url("./assets/upcomingRocket.gif");
   background-position: center;
   color:white;
 }
@@ -100,6 +100,14 @@ h2 {
 .firstRowRocketList,.secondRowRocketList {
   display:flex;
   justify-content: space-evenly;
+}
+
+.firstRowRocketList a, .secondRowRocketList a {
+  border:0;
+  padding:0;
+  text-decoration: none;
+  /* background-color: rgba(0,0,0,0.0); */
+
 }
 
 .rocket1 {
@@ -157,11 +165,14 @@ h3 {
   text-align: center;
 }
 
+.page3Halves {
+  display:flex;
+}
+
 .leftHalfPage3 {
   width:calc(50% - 10px);
   background-color:rebeccapurple;
   height:80vh;
-  float:left;
   margin-right:10px;
 }
 
@@ -169,6 +180,16 @@ h3 {
   width:calc(50% - 10px);
   margin-left:10px;
   height:80vh;
-  float:left;
   background-color:blanchedalmond;
+  font-size:2.2rem;
+  padding-left:30px;
+  color:black;
+}
+
+.rightHalfPage3 p {
+  color:crimson;
+}
+
+.rightHalfPage3 span {
+  color:black;
 }

@@ -13,10 +13,8 @@ class App extends Component {
     this.state = {
       rockets: [],
       showPage2: false,
-      showPage3: false,
+      showPage3: true,
     }
-    // this.click = this.click.bind(this);
-    // above
   }
 
   hidingPage2 = () => {
@@ -101,7 +99,7 @@ class App extends Component {
                 : null
             } */}
 
-
+            {/* Link for smooth scroll */}
             <Link
               activeClass="active"
               to="page2Link"
@@ -125,6 +123,7 @@ class App extends Component {
               : null
             } */}
 
+            {/* Link for smooth scroll */}
             <Link
               activeClass="active"
               to="page2Link"
@@ -148,6 +147,7 @@ class App extends Component {
                 : null
             } */}
 
+            {/* Link for smooth scroll */}
             <Link
               activeClass="active"
               to="page2Link"

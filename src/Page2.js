@@ -52,127 +52,219 @@ class Page2 extends Component {
                 <div className="wrapper">
                     <h2>CHOOSE A ROCKET OF INTEREST</h2>
                     <div className="firstRowRocketList">
-                        <div className="rocket1">
-                            <div className="topHalf">
-                                <h4 className="flightNumber topHalf">Flight Number</h4>
-                                <p>1</p>
-                            </div>
-                            <div className="missionName">
-                                <p>Mission Name</p>
-                                <p>FatSat</p>
-                            </div>
-                            <div className="missionStatus">
-                                <p>Launch Status</p>
-                                <p>Failure</p>
-                            </div>
-                        </div>
+                        <Link
+                            activeClass="active"
+                            to="page3Link"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <a href ='#page3Link' className="rocket1Button">
+                                <div className="rocket1">
+                                    <div className="topHalf">
+                                        <h4 className="flightNumber topHalf">Flight Number</h4>
+                                        <p>1</p>
+                                    </div>
+                                    <div className="missionName">
+                                        <p>Mission Name</p>
+                                        <p>FatSat</p>
+                                    </div>
+                                    <div className="missionStatus">
+                                        <p>Launch Status</p>
+                                        <p>Failure</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
 
-                        <div className="rocket1">
-                            <div className="topHalf">
-                                <h4 className="flightNumber topHalf">Flight Number</h4>
-                                <p>1</p>
-                            </div>
-                            <div className="missionName">
-                                <p>Mission Name</p>
-                                <p>FatSat</p>
-                            </div>
-                            <div className="missionStatus">
-                                <p>Launch Status</p>
-                                <p>Failure</p>
-                            </div>
-                        </div>
+                        <Link
+                            activeClass="active"
+                            to="page3Link"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <a href="#page3Link" className="rocket1Button">
+                                <div className="rocket1">
+                                    <div className="topHalf">
+                                        <h4 className="flightNumber topHalf">Flight Number</h4>
+                                        <p>1</p>
+                                    </div>
+                                    <div className="missionName">
+                                        <p>Mission Name</p>
+                                        <p>FatSat</p>
+                                    </div>
+                                    <div className="missionStatus">
+                                        <p>Launch Status</p>
+                                        <p>Failure</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
 
-                        <div className="rocket1">
-                            <div className="topHalf">
-                                <h4 className="flightNumber topHalf">Flight Number</h4>
-                                <p>1</p>
-                            </div>
-                            <div className="missionName">
-                                <p>Mission Name</p>
-                                <p>FatSat</p>
-                            </div>
-                            <div className="missionStatus">
-                                <p>Launch Status</p>
-                                <p>Failure</p>
-                            </div>
-                        </div>
 
-                        <div className="rocket1">
-                            <div className="topHalf">
-                                <h4 className="flightNumber topHalf">Flight Number</h4>
-                                <p>1</p>
-                            </div>
-                            <div className="missionName">
-                                <p>Mission Name</p>
-                                <p>FatSat</p>
-                            </div>
-                            <div className="missionStatus">
-                                <p>Launch Status</p>
-                                <p>Failure</p>
-                            </div>
-                        </div>
+                        <Link
+                            activeClass="active"
+                            to="page3Link"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <a href="#page3Link" className="rocket1Button">
+                                <div className="rocket1">
+                                    <div className="topHalf">
+                                        <h4 className="flightNumber topHalf">Flight Number</h4>
+                                        <p>1</p>
+                                    </div>
+                                    <div className="missionName">
+                                        <p>Mission Name</p>
+                                        <p>FatSat</p>
+                                    </div>
+                                    <div className="missionStatus">
+                                        <p>Launch Status</p>
+                                        <p>Failure</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
+
+                        <Link
+                            activeClass="active"
+                            to="page3Link"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <a href="#page3Link" className="rocket1Button">
+                                <div className="rocket1">
+                                    <div className="topHalf">
+                                        <h4 className="flightNumber topHalf">Flight Number</h4>
+                                        <p>1</p>
+                                    </div>
+                                    <div className="missionName">
+                                        <p>Mission Name</p>
+                                        <p>FatSat</p>
+                                    </div>
+                                    <div className="missionStatus">
+                                        <p>Launch Status</p>
+                                        <p>Failure</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
                     </div>
 
+
                     <div className="secondRowRocketList">
-                        <div className="rocket1">
-                            <div className="topHalf">
-                                <h4 className="flightNumber topHalf">Flight Number</h4>
-                                <p>1</p>
-                            </div>
-                            <div className="missionName">
-                                <p>Mission Name</p>
-                                <p>FatSat</p>
-                            </div>
-                            <div className="missionStatus">
-                                <p>Launch Status</p>
-                                <p>Failure</p>
-                            </div>
-                        </div>
 
-                        <div className="rocket1">
-                            <div className="topHalf">
-                                <h4 className="flightNumber topHalf">Flight Number</h4>
-                                <p>1</p>
-                            </div>
-                            <div className="missionName">
-                                <p>Mission Name</p>
-                                <p>FatSat</p>
-                            </div>
-                            <div className="missionStatus">
-                                <p>Launch Status</p>
-                                <p>Failure</p>
-                            </div>
-                        </div>
+                        <Link
+                            activeClass="active"
+                            to="page3Link"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <a href="#page3Link" className="rocket1Button">
+                                <div className="rocket1">
+                                    <div className="topHalf">
+                                        <h4 className="flightNumber topHalf">Flight Number</h4>
+                                        <p>1</p>
+                                    </div>
+                                    <div className="missionName">
+                                        <p>Mission Name</p>
+                                        <p>FatSat</p>
+                                    </div>
+                                    <div className="missionStatus">
+                                        <p>Launch Status</p>
+                                        <p>Failure</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
 
-                        <div className="rocket1">
-                            <div className="topHalf">
-                                <h4 className="flightNumber topHalf">Flight Number</h4>
-                                <p>1</p>
-                            </div>
-                            <div className="missionName">
-                                <p>Mission Name</p>
-                                <p>FatSat</p>
-                            </div>
-                            <div className="missionStatus">
-                                <p>Launch Status</p>
-                                <p>Failure</p>
-                            </div>
-                        </div>
+                        <Link
+                            activeClass="active"
+                            to="page3Link"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <a href="#page3Link" className="rocket1Button">
+                                <div className="rocket1">
+                                    <div className="topHalf">
+                                        <h4 className="flightNumber topHalf">Flight Number</h4>
+                                        <p>1</p>
+                                    </div>
+                                    <div className="missionName">
+                                        <p>Mission Name</p>
+                                        <p>FatSat</p>
+                                    </div>
+                                    <div className="missionStatus">
+                                        <p>Launch Status</p>
+                                        <p>Failure</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
 
-                        <div className="rocket1">
-                            <div className="topHalf">
-                                <h4 className="flightNumber topHalf">Flight Number</h4>
-                                <p>1</p>
-                            </div>
-                            <div className="missionName">
-                                <p>Mission Name</p>
-                                <p>FatSat</p>
-                            </div>
-                            <div className="missionStatus">
-                                <p>Launch Status</p>
-                                <p>Failure</p>
-                            </div>
-                        </div>
+                        <Link
+                            activeClass="active"
+                            to="page3Link"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <a href="#page3Link" className="rocket1Button">
+                                <div className="rocket1">
+                                    <div className="topHalf">
+                                        <h4 className="flightNumber topHalf">Flight Number</h4>
+                                        <p>1</p>
+                                    </div>
+                                    <div className="missionName">
+                                        <p>Mission Name</p>
+                                        <p>FatSat</p>
+                                    </div>
+                                    <div className="missionStatus">
+                                        <p>Launch Status</p>
+                                        <p>Failure</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
+
+                        <Link
+                            activeClass="active"
+                            to="page3Link"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <a href="#page3Link" className="rocket1Button">
+                                <div className="rocket1">
+                                    <div className="topHalf">
+                                        <h4 className="flightNumber topHalf">Flight Number</h4>
+                                        <p>1</p>
+                                    </div>
+                                    <div className="missionName">
+                                        <p>Mission Name</p>
+                                        <p>FatSat</p>
+                                    </div>
+                                    <div className="missionStatus">
+                                        <p>Launch Status</p>
+                                        <p>Failure</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </Link>
+
                     </div>
                 </div>
             </section>
