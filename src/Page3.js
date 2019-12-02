@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
+import ReactPlayer from 'react-player';
 
 class Page3 extends Component {
 
-
     render () {
-        console.log(this.props.rocket);
         // rocket details
-        const { flight_number, details, launch_year, mission_name, launch_success,  } = this.props.rocket;
-        // rocket image
-        let image;
+        const { flight_number, details, launch_year, mission_name, launch_success, rocket  } = this.props.rocket;
+        // rocket image and image
+        let image, video;
         if(this.props.rocket.links !== undefined){
             image = this.props.rocket.links.flickr_images[0];
+            video = this.props.rocket.links.video_link;
         }
+
         return (
             <section className="page3" id="page3Link">
                 <div className="wrapper">
@@ -19,20 +20,20 @@ class Page3 extends Component {
                     <div className="page3Halves">
                         <div className="leftHalfPage3">
                             <div className="launchVideo">
-                                <video src=""></video>
+                                <ReactPlayer url={video} playing='false' volume='0' />
                             </div>
-                            <div className="badgeOfRocket">
-                                <img src={image} alt="Image of rocket badge"/>
+                            <div className="rocketImage">
+                                <img src={image} alt="Image of rocket"/>
                             </div>
                         </div>
 
                         <div className="rightHalfPage3">
                             <p><span className="page3FlightNumber">Flight Number: </span>{flight_number}</p>
                             <p><span className="page3MissionName">Mission Name: </span>{mission_name}</p>
-                            <p><span className="page3StatusOfMission">Status of Mission: </span>{launch_success}</p>
+                            <p><span className="page3StatusOfMission">Status of Mission: </span>{launch_success?"Success":"Failure"}</p>
                             <p><span className="page3RocketType">Details </span>{details}</p>
                             <p><span className="page3AnotherStuff">Launch Year: </span>{launch_year}</p>
-                            <p><span className="page3NameSomething">Name something:</span>Lorem ipsum dolor sit.</p>
+                            {/* <p><span className="page3NameSomething">Name something:</span>{rocket.rocket_id}</p> */}
                             <p><span className="page3FlightNumber">Flight Number: </span>Lorem, ipsum.</p>
                             <p><span className="page3MissionName">Mission Name: </span>Lorem, ipsum.</p>
                             <p><span className="page3StatusOfMission">Status of Mission: </span>Lorem, ipsum dolor.</p>

@@ -97,13 +97,15 @@ h2 {
   padding-top:20px;
 }
 
-.firstRowRocketList,.secondRowRocketList {
+.firstRowRocketList,
+.secondRowRocketList {
   display:flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.firstRowRocketList a, .secondRowRocketList a {
+.firstRowRocketList a,
+.secondRowRocketList a {
   border:0;
   padding:0;
   text-decoration: none;
@@ -150,8 +152,6 @@ h2 {
   align-items: stretch;
 }
 
-
-
 /* Page3 Edits */
 .page3 {
   height:100vh;
@@ -197,8 +197,16 @@ h2 {
   color:black;
 }
 
-.launchVideo, .badgeOfRocket {
-  margin:10px;
-  background-color:darkblue;
-  height:40vh;
+.launchVideo, .rocketImage {
+  border:1px solid red;
+}
+
+.launchVideo {
+  max-height:30vh;
+  max-width:100%;
+}
+
+.rocketImage img{
+   max-width:100%;
+   max-height:50vh;
 }

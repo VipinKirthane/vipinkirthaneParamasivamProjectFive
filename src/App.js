@@ -18,13 +18,13 @@ class App extends Component {
     }
   }
 
-  hidingPage2 = () => {
+  revealPage2 = () => {
     this.setState({
       showPage2: true,
     })
   }
 
-  hidingPage3 = () => {
+  revealPage3 = () => {
     this.setState({
       showPage3: true,
     })
@@ -52,7 +52,6 @@ class App extends Component {
       method: 'GET',
       dataResponse: 'json'
     }).then((response) => {
-      console.log(response.data[1].mission_name);
       this.setState({
         rockets: response.data,
       })
@@ -66,7 +65,6 @@ class App extends Component {
       method: 'GET',
       dataResponse: 'json'
     }).then((response) => {
-      console.log(response.data[2].mission_name);
       this.setState({
         rockets: response.data,
       })
@@ -91,7 +89,7 @@ class App extends Component {
             >
               <div><button
                 className="firstOption"
-                onClick={() => { this.rocketSelectionHandlerLatestLaunches(); this.hidingPage2(); } }>
+                onClick={() => { this.rocketSelectionHandlerLatestLaunches(); this.revealPage2(); } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
             </Link>
 
@@ -107,7 +105,7 @@ class App extends Component {
             >
               <div><button
               className="secondOption"
-              onClick={() => {this.rocketSelectionHandlerPastLaunches(); this.hidingPage2(); } }>
+              onClick={() => {this.rocketSelectionHandlerPastLaunches(); this.revealPage2(); } }>
                 PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
             </Link>
 
@@ -123,7 +121,7 @@ class App extends Component {
             >
               <div><button
               className="thirdOption"
-              onClick={() => {this.rocketSelectionHandlerUpcomingLaunches(); this.hidingPage2(); }}>
+              onClick={() => {this.rocketSelectionHandlerUpcomingLaunches(); this.revealPage2(); }}>
                 UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
             </Link>
           </main>

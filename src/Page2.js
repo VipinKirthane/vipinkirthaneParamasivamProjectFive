@@ -11,7 +11,6 @@ class Page2 extends Component {
             method: 'GET',
             dataResponse: 'json'
         }).then((response) => {
-            console.log(response.data.launch_year);
             this.setState({
                 rockets: response.data,
             })
@@ -25,7 +24,6 @@ class Page2 extends Component {
             method: 'GET',
             dataResponse: 'json'
         }).then((response) => {
-            console.log(response.data[1].mission_name);
             this.setState({
                 rockets: response.data,
             })
@@ -39,7 +37,6 @@ class Page2 extends Component {
             method: 'GET',
             dataResponse: 'json'
         }).then((response) => {
-            console.log(response.data[2].mission_name);
             this.setState({
                 rockets: response.data,
             })
@@ -63,7 +60,6 @@ class Page2 extends Component {
                                         smooth={true}
                                         offset={0}
                                         duration={500}
-
                                         onClick = {() => this.props.selectRocket(rocket)}
                                     >
                                         <a href='#page3Link' className="rocket1Button">
@@ -86,8 +82,6 @@ class Page2 extends Component {
                                 )
                             })
                         }
-
-
                     </div>
                 </div>
             </section>
