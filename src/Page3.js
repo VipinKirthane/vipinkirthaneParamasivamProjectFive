@@ -19,20 +19,21 @@ class Page3 extends Component {
                     <h2 className="page3Header">ROCKET - <span>{flight_number}</span></h2>
 
                     <div className="topHalfPage3launchVideo">
-                        <ReactPlayer url={video} playing='false' volume='0' />
+                        <ReactPlayer url={video} playing='false' volume='0' width='100%' control='true'/>
                     </div>
 
                     <div className="page3Halves">
                         <div className="leftHalfPage3">
                             <div className="rocketImage">
-                                <img src={image} alt="Image of rocket"/>
+                                {image !== undefined ? <img src={image} alt="Image of rocket" /> : <img src="./assets/latestLaunches.gif" alt="" />}
+
                             </div>
                         </div>
 
                         <div className="rightHalfPage3">
                             <p><span className="page3FlightNumber">Flight Number: </span>{flight_number}</p>
                             <p><span className="page3MissionName">Mission Name: </span>{mission_name}</p>
-                            <p><span className="page3StatusOfMission">Status of Mission: </span>{launch_success?"Success":"Failure"}</p>
+                            <p><span className="page3StatusOfMission">Status of Mission: </span>{this.props.launchType !== 'upcoming' ? <p>{launch_success ? "Success" : "Failure"}</p> : <p>Not Applicable</p>}</p>
                             <p><span className="page3RocketType">Details </span>{details}</p>
                             <p><span className="page3AnotherStuff">Launch Year: </span>{launch_year}</p>
                             {/* <p><span className="page3NameSomething">Name something:</span>{rocket.rocket_id}</p> */}

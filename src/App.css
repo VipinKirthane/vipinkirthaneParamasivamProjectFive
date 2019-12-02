@@ -86,7 +86,6 @@ h1 {
 /* Page2 Edits */
 .page2 {
   min-height:100vh;
-  /* text-align: center; */
   background-color:bisque;
 }
 
@@ -110,13 +109,10 @@ h2 {
   border:0;
   padding:0;
   text-decoration: none;
-  /* background-color: rgba(0,0,0,0.0); */
-
 }
 
 .rocket1 {
   height:300px;
-  /* display:inline-block; */
   width:200px;
   color:black;
   margin:30px;
@@ -155,7 +151,6 @@ h2 {
 
 /* Page3 Edits */
 .page3 {
-  /* height:100vh; */
   background-color:lightseagreen;
   color:darkmagenta;
 }
@@ -176,8 +171,6 @@ h2 {
 
 .leftHalfPage3 {
   width:calc(50% - 10px);
-  /* background-color:rebeccapurple; */
-  /* height:80vh; */
   margin-right:10px;
   margin-bottom:20px;
 }
@@ -185,7 +178,6 @@ h2 {
 .rightHalfPage3 {
   width:calc(50% - 10px);
   margin-left:10px;
-  /* height:80vh; */
   background-color:blanchedalmond;
   font-size:1.8rem;
   padding-left:30px;
@@ -215,6 +207,7 @@ h2 {
 
 .topHalfPage3launchVideo Reactplayer {
   width:100%;
+  height:auto;
   text-align: center;
   margin:0 auto;
 }

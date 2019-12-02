@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import Axios from 'axios';
+// import React, { Component } from 'react';
+// import Axios from 'axios';
 
-class Page1 extends Component {
-    render () {
-        return (
-            <div></div>
+// class Page1 extends Component {
+//     render () {
+//         return (
+//             <div></div>
 
 
-        )
-    }
-}
+//         )
+//     }
+// }
 
-export default Page1;
+// export default Page1;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Animated } from "react-animated-css";
 // import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
@@ -15,6 +16,7 @@ class App extends Component {
       showPage2: false,
       showPage3: false,
       rocketToShow: {},
+      launchType: '',
     }
   }
 
@@ -47,7 +49,9 @@ class App extends Component {
     }).then((response) => {
       this.setState({
         rockets: [response.data],
-      }, () => {this.revealPage2() })
+      }, () => { this.setState({
+        launchType: 'latest'
+      }); this.revealPage2() })
     })
   }
 
@@ -61,7 +65,9 @@ class App extends Component {
     }).then((response) => {
       this.setState({
         rockets: response.data,
-      }, () => { this.revealPage2() })
+      }, () => { this.setState({
+        launchType: 'past'
+      }) ; this.revealPage2() })
     })
   }
 
@@ -74,7 +80,9 @@ class App extends Component {
     }).then((response) => {
       this.setState({
         rockets: response.data,
-      }, () => { this.revealPage2() })
+      }, () => { this.setState({
+        launchType: 'upcoming'
+      }) ;this.revealPage2() })
     })
   }
 
@@ -94,10 +102,12 @@ class App extends Component {
               offset={0}
               duration={500}
             > */}
+            <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
               <div><button
                 className="firstOption"
                 onClick={() => { this.rocketSelectionHandlerLatestLaunches() } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
+            </Animated>
             {/* </Link> */}
 
 
@@ -140,6 +150,7 @@ class App extends Component {
           <Page2
           launches={this.state.rockets}
           revealPage3={this.revealPage3}
+          launchType = {this.state.launchType}
           selectRocket= {(specificRocket) => {
             this.setState({
               rocketToShow : specificRocket,
@@ -153,16 +164,18 @@ class App extends Component {
       {
         this.state.showPage3 ?
           <div >
-            <Page3 rocket={this.state.rocketToShow}/>
+            <Page3 rocket={this.state.rocketToShow}
+                launchType={this.state.launchType}/>
           </div>
           :
           null
       }
-
-        {/* <Page3 /> */}
       </div>
     );
   }
 }
 
 export default App;
+
+// Include error handling
+// Include accessibility

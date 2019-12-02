@@ -53,6 +53,7 @@ class Page2 extends Component {
                         {
                             this.props.launches.map((rocket) => {
                                 const { flight_number, mission_name, launch_success } = rocket;
+                                // if (launch_success === null)
                                 return (
                                     <Link
                                         activeClass="active"
@@ -75,7 +76,8 @@ class Page2 extends Component {
                                                 </div>
                                                 <div className="missionStatus">
                                                     <p>Launch Status</p>
-                                                    <p>{ launch_success ? "Success" : "Failure" }</p>
+                                                    { this.props.launchType !== 'upcoming' ? <p>{launch_success ? "Success" : "Failure"}</p> : <p>Not Applicable</p>}
+
                                                 </div>
                                             </div>
                                         </a>
