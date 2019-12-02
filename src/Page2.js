@@ -43,6 +43,7 @@ class Page2 extends Component {
         });
     }
 
+
     render () {
         return (
             <section className="page2" id="page2Link">
@@ -60,7 +61,7 @@ class Page2 extends Component {
                                         smooth={true}
                                         offset={0}
                                         duration={500}
-                                        onClick = {() => this.props.selectRocket(rocket)}
+                                        onClick = {() => {this.props.selectRocket(rocket); this.props.revealPage3()}}
                                     >
                                         <a href='#page3Link' className="rocket1Button">
                                             <div className="rocket1">

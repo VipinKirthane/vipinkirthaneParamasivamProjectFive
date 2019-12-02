@@ -16,12 +16,14 @@ class Page3 extends Component {
         return (
             <section className="page3" id="page3Link">
                 <div className="wrapper">
-                    <h3 className="page3Header">ROCKET <span>1</span></h3>
+                    <h2 className="page3Header">ROCKET - <span>{flight_number}</span></h2>
+
+                    <div className="topHalfPage3launchVideo">
+                        <ReactPlayer url={video} playing='false' volume='0' />
+                    </div>
+
                     <div className="page3Halves">
                         <div className="leftHalfPage3">
-                            <div className="launchVideo">
-                                <ReactPlayer url={video} playing='false' volume='0' />
-                            </div>
                             <div className="rocketImage">
                                 <img src={image} alt="Image of rocket"/>
                             </div>
@@ -42,6 +44,8 @@ class Page3 extends Component {
                             <p><span className="page3NameSomething">Name something: </span>Lorem ipsum dolor sit.</p>
                         </div>
                     </div>
+
+
                 </div>
             </section>
         )

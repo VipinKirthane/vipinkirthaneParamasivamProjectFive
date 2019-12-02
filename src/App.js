@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       rockets: [],
       showPage2: false,
-      showPage3: true,
+      showPage3: false,
       rocketToShow: {},
     }
   }
@@ -21,15 +21,22 @@ class App extends Component {
   revealPage2 = () => {
     this.setState({
       showPage2: true,
+    }, () => {
+        document.getElementById('page2Link').scrollIntoView({
+          behavior: 'smooth'
+        });
     })
   }
 
   revealPage3 = () => {
     this.setState({
       showPage3: true,
+    }, () => {
+      document.getElementById('page3Link').scrollIntoView({
+        behavior: 'smooth'
+      });
     })
   }
-
 
   // Latest Launches
   rocketSelectionHandlerLatestLaunches = () => {
@@ -40,8 +47,8 @@ class App extends Component {
     }).then((response) => {
       this.setState({
         rockets: [response.data],
-      })
-    });
+      }, () => {this.revealPage2() })
+    })
   }
 
 
@@ -54,8 +61,8 @@ class App extends Component {
     }).then((response) => {
       this.setState({
         rockets: response.data,
-      })
-    });
+      }, () => { this.revealPage2() })
+    })
   }
 
   // Upcoming Launches
@@ -67,8 +74,8 @@ class App extends Component {
     }).then((response) => {
       this.setState({
         rockets: response.data,
-      })
-    });
+      }, () => { this.revealPage2() })
+    })
   }
 
   render () {
@@ -79,51 +86,51 @@ class App extends Component {
           <main className="mainOptions wrapper">
 
             {/* Link for smooth scroll */}
-            <Link
+            {/* <Link
               activeClass="active"
               to="page2Link"
               spy={true}
               smooth={true}
               offset={0}
               duration={500}
-            >
+            > */}
               <div><button
                 className="firstOption"
-                onClick={() => { this.rocketSelectionHandlerLatestLaunches(); this.revealPage2(); } }>
+                onClick={() => { this.rocketSelectionHandlerLatestLaunches() } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
-            </Link>
+            {/* </Link> */}
 
 
             {/* Link for smooth scroll */}
-            <Link
+            {/* <Link
               activeClass="active"
               to="page2Link"
               spy={true}
               smooth={true}
               offset={0}
               duration={500}
-            >
+            > */}
               <div><button
               className="secondOption"
-              onClick={() => {this.rocketSelectionHandlerPastLaunches(); this.revealPage2(); } }>
+              onClick={() => {this.rocketSelectionHandlerPastLaunches() } }>
                 PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
-            </Link>
+            {/* </Link> */}
 
 
             {/* Link for smooth scroll */}
-            <Link
+            {/* <Link
               activeClass="active"
               to="page2Link"
               spy={true}
               smooth={true}
               offset={0}
               duration={500}
-            >
+            > */}
               <div><button
               className="thirdOption"
-              onClick={() => {this.rocketSelectionHandlerUpcomingLaunches(); this.revealPage2(); }}>
+              onClick={() => {this.rocketSelectionHandlerUpcomingLaunches()}}>
                 UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
-            </Link>
+            {/* </Link> */}
           </main>
         </div>
 
@@ -132,6 +139,7 @@ class App extends Component {
         <div >
           <Page2
           launches={this.state.rockets}
+          revealPage3={this.revealPage3}
           selectRocket= {(specificRocket) => {
             this.setState({
               rocketToShow : specificRocket,

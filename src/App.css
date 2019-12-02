@@ -94,7 +94,8 @@ h2 {
   margin:0;
   text-align: center;
   font-size:3rem;
-  padding-top:20px;
+  padding-top:40px;
+  margin-bottom:30px;
 }
 
 .firstRowRocketList,
@@ -154,7 +155,7 @@ h2 {
 
 /* Page3 Edits */
 .page3 {
-  height:100vh;
+  /* height:100vh; */
   background-color:lightseagreen;
   color:darkmagenta;
 }
@@ -164,8 +165,9 @@ h2 {
   padding-top:50px;
   font-size:3.3rem;
   text-align: center;
-  color:white;
+  color:black;
   letter-spacing: 5px;
+  margin-bottom:30px;
 }
 
 .page3Halves {
@@ -174,19 +176,21 @@ h2 {
 
 .leftHalfPage3 {
   width:calc(50% - 10px);
-  background-color:rebeccapurple;
-  height:80vh;
+  /* background-color:rebeccapurple; */
+  /* height:80vh; */
   margin-right:10px;
+  margin-bottom:20px;
 }
 
 .rightHalfPage3 {
   width:calc(50% - 10px);
   margin-left:10px;
-  height:80vh;
+  /* height:80vh; */
   background-color:blanchedalmond;
-  font-size:2.2rem;
+  font-size:1.8rem;
   padding-left:30px;
   color:black;
+  margin-bottom:20px;
 }
 
 .rightHalfPage3 p {
@@ -195,15 +199,24 @@ h2 {
 
 .rightHalfPage3 span {
   color:black;
+  font-weight: 900;
 }
 
-.launchVideo, .rocketImage {
-  border:1px solid red;
+.rocketImage {
+  text-align: center;
 }
 
-.launchVideo {
-  max-height:30vh;
-  max-width:100%;
+.topHalfPage3launchVideo {
+  margin-bottom: 20px;
+  display:flex;
+  justify-content: center;
+  width:100%;
+}
+
+.topHalfPage3launchVideo Reactplayer {
+  width:100%;
+  text-align: center;
+  margin:0 auto;
 }
 
 .rocketImage img{
