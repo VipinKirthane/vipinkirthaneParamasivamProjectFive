@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link, animateScroll as scroll } from "react-scroll";
-import Page1 from './Page1';
+// import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
 import './App.css';
@@ -14,6 +14,7 @@ class App extends Component {
       rockets: [],
       showPage2: false,
       showPage3: true,
+      rocketToShow: {},
     }
   }
 
@@ -29,10 +30,6 @@ class App extends Component {
     })
   }
 
-  // 2. For axios call
-  componentDidMount() {
-    // <Page2 />
-  }
 
   // Latest Launches
   rocketSelectionHandlerLatestLaunches = () => {
@@ -41,18 +38,11 @@ class App extends Component {
       method: 'GET',
       dataResponse: 'json'
     }).then((response) => {
-      console.log(response.data.launch_year);
-      // const latestLaunchesList = ({flight_number, mission_name, launch_year}) => {
-      //   console.log(`The flight number is ${flight_number}, mission name is ${mission_name} and launch year is ${launch_year}`);
-      // }
-      // latestLaunchesList(response.data[0]);
-
       this.setState({
-        rockets: response.data,
+        rockets: [response.data],
       })
     });
   }
-
 
 
   // Past Launches
@@ -90,15 +80,6 @@ class App extends Component {
           <h1>Space X Rocket Portfolio</h1>
           <main className="mainOptions wrapper">
 
-            {/* {
-            this.state.hidingPage2 ?
-              <div><button
-                className="firstOption"
-                onClick={() => this.rocketSelectionHandlerLatestLaunches, this.hidingPage2}>
-                LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
-                : null
-            } */}
-
             {/* Link for smooth scroll */}
             <Link
               activeClass="active"
@@ -110,18 +91,10 @@ class App extends Component {
             >
               <div><button
                 className="firstOption"
-                onClick={() => this.rocketSelectionHandlerLatestLaunches, this.hidingPage2}>
+                onClick={() => { this.rocketSelectionHandlerLatestLaunches(); this.hidingPage2(); } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
             </Link>
 
-            {/* {
-              this.state.hidingPage2 ?
-              <div><button
-                className="secondOption"
-                onClick={() => this.rocketSelectionHandlerPastLaunches, this.hidingPage2}>
-                PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
-              : null
-            } */}
 
             {/* Link for smooth scroll */}
             <Link
@@ -134,18 +107,10 @@ class App extends Component {
             >
               <div><button
               className="secondOption"
-              onClick={() => this.rocketSelectionHandlerPastLaunches, this.hidingPage2}>
+              onClick={() => {this.rocketSelectionHandlerPastLaunches(); this.hidingPage2(); } }>
                 PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
             </Link>
 
-            {/* {
-              this.state.hidingPage2 ?
-                <div><button
-                  className="thirdOption"
-                  onClick={() => this.rocketSelectionHandlerUpcomingLaunches, this.hidingPage2}>
-                  UPCOMING LAUNCHES{this.state.rockets.rocket_id}</button></div>
-                : null
-            } */}
 
             {/* Link for smooth scroll */}
             <Link
@@ -158,7 +123,7 @@ class App extends Component {
             >
               <div><button
               className="thirdOption"
-              onClick={() => this.rocketSelectionHandlerUpcomingLaunches, this.hidingPage2}>
+              onClick={() => {this.rocketSelectionHandlerUpcomingLaunches(); this.hidingPage2(); }}>
                 UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
             </Link>
           </main>
@@ -167,23 +132,26 @@ class App extends Component {
       {
       this.state.showPage2 ?
         <div >
-          <Page2 />
+          <Page2
+          launches={this.state.rockets}
+          selectRocket= {(specificRocket) => {
+            this.setState({
+              rocketToShow : specificRocket,
+            })
+          }} />
         </div>
         :
         null
       }
 
-        {
-          this.state.showPage3 ?
-            <div >
-              <Page3 />
-            </div>
-            :
-            null
-        }
-
-
-
+      {
+        this.state.showPage3 ?
+          <div >
+            <Page3 rocket={this.state.rocketToShow}/>
+          </div>
+          :
+          null
+      }
 
         {/* <Page3 /> */}
       </div>

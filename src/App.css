@@ -100,6 +100,7 @@ h2 {
 .firstRowRocketList,.secondRowRocketList {
   display:flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .firstRowRocketList a, .secondRowRocketList a {
@@ -158,11 +159,13 @@ h2 {
   color:darkmagenta;
 }
 
-h3 {
+.page3Header {
   margin-top:0;
   padding-top:50px;
-  font-size:30px;
+  font-size:3.3rem;
   text-align: center;
+  color:white;
+  letter-spacing: 5px;
 }
 
 .page3Halves {
@@ -192,4 +195,10 @@ h3 {
 
 .rightHalfPage3 span {
   color:black;
+}
+
+.launchVideo, .badgeOfRocket {
+  margin:10px;
+  background-color:darkblue;
+  height:40vh;
 }
