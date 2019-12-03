@@ -12,14 +12,18 @@ class Page3 extends Component {
             image = this.props.rocket.links.flickr_images[0];
             video = this.props.rocket.links.video_link;
         }
-
+        console.log(video);
         return (
             <section className="page3" id="page3Link">
                 <div className="wrapper">
                     <h2 className="page3Header">ROCKET - <span>{flight_number}</span></h2>
 
                     <div className="topHalfPage3launchVideo tabindex='0'">
-                        <ReactPlayer url={video} playing='false' volume='0' width='100%' className="tabIndex='0'"control='true'/>
+                        {
+                            video !== undefined && video !== null
+                                ? <ReactPlayer url={video} playing={false} volume={0} width='100%' className="tabIndex='0'" control='true' />
+                                : <img className="videoFallback" src="./assets/videoFallback.png" alt="Video not found" />
+                        }
                     </div>
 
                     <div className="page3Halves">

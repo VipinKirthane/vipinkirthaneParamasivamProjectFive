@@ -92,7 +92,7 @@ class App extends Component {
     return (
       <div>
         <div className='page1' id='mainLink'>
-          <h1>Space X Rocket Portfolio</h1>
+          <h1>SPACE X ROCKET PORTFOLIO</h1>
           <main className='mainOptions wrapper'>
 
               <div className="firstOptionParent"><button
@@ -147,8 +147,7 @@ class App extends Component {
 export default App;
 
 // Include accessibility
-// Include placeholder image for missing video in upcoming launches
-// Put things in the folder
+// Try to add ternary operator for empty details for flights such as 104
 
 // Add google fonts
 // fix sizes of the rocket cards
@@ -156,6 +155,5 @@ export default App;
 // Link is bursting out in page 2
 
 // Comment the code
-// Try to add ternary operator for empty details for flights such as 104
 // Each child should have unique index
 // check the console for errors
