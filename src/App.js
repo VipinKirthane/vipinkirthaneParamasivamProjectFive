@@ -102,12 +102,12 @@ class App extends Component {
               offset={0}
               duration={500}
             > */}
-            <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
-              <div><button
+            {/* <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}> */}
+              <div className="firstOptionParent animated bounce"><button
                 className="firstOption"
                 onClick={() => { this.rocketSelectionHandlerLatestLaunches() } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
-            </Animated>
+            {/* </Animated> */}
             {/* </Link> */}
 
 

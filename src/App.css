@@ -216,3 +216,15 @@ h2 {
    max-width:100%;
    max-height:50vh;
 }
+
+
+
+.firstOptionParent {
+  /* transition:all 0.35s ease-in-out; */
+}
+
+
+.firstOption:hover,.secondOption:hover, .thirdOption:hover {
+  transform:scale(1.1);
+  transition:all 0.35s ease-in-out;
+}

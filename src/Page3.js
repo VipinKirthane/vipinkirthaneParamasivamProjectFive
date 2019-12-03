@@ -33,7 +33,9 @@ class Page3 extends Component {
                         <div className="rightHalfPage3">
                             <p><span className="page3FlightNumber">Flight Number: </span>{flight_number}</p>
                             <p><span className="page3MissionName">Mission Name: </span>{mission_name}</p>
-                            <p><span className="page3StatusOfMission">Status of Mission: </span>{this.props.launchType !== 'upcoming' ? <p>{launch_success ? "Success" : "Failure"}</p> : <p>Not Applicable</p>}</p>
+
+                            <p><span className="page3StatusOfMission">Status of Mission: </span>{this.props.launchType !== 'upcoming' ? <span>{launch_success ? "Success" : "Failure"}</span> : <span>Not Applicable</span>}</p>
+
                             <p><span className="page3RocketType">Details </span>{details}</p>
                             <p><span className="page3AnotherStuff">Launch Year: </span>{launch_year}</p>
                             {/* <p><span className="page3NameSomething">Name something:</span>{rocket.rocket_id}</p> */}
