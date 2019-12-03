@@ -8,6 +8,18 @@ class Page2 extends Component {
                 <div className='wrapper'>
                     <h2>CHOOSE A ROCKET OF INTEREST</h2>
                     <div className='firstRowRocketList'>
+                        <Link
+                            activeClass='active'
+                            to='mainLink'
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                            className="rocketHomeButton"
+                            tabindex='0'
+                        >
+                            <i class="fas fa-rocket"></i>
+                        </Link>
                         {
                             this.props.launches.map((rocket) => {
                                 const { flight_number, mission_name, launch_success } = rocket;
@@ -46,17 +58,7 @@ class Page2 extends Component {
                                 )
                             })
                         }
-                        <Link
-                            activeClass='active'
-                            to='mainLink'
-                            spy={true}
-                            smooth={true}
-                            offset={0}
-                            duration={500}
-                            className="rocketHomeButton"
-                        >
-                            <i class="fas fa-rocket"></i>
-                        </Link>
+
                     </div>
                 </div>
             </section>
