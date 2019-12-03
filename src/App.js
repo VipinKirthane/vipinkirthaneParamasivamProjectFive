@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+// Package for axios call
 import axios from 'axios';
 import Page2 from './components/Page2';
 import Page3 from './components/Page3';
 import './App.css';
 
 class App extends Component {
-  // 1.Initializing the state
+  //Initializing the state
   constructor() {
     super();
     this.state = {
@@ -17,6 +18,7 @@ class App extends Component {
     }
   }
 
+  // Function for revealing Page 2
   revealPage2 = () => {
     this.setState({
       showPage2: true,
@@ -27,6 +29,7 @@ class App extends Component {
     })
   }
 
+  // Function for revealing Page 3
   revealPage3 = () => {
     this.setState({
       showPage3: true,
@@ -37,7 +40,7 @@ class App extends Component {
     })
   }
 
-  // Latest Launches
+  // Axios call for Latest Launches Data
   rocketSelectionHandlerLatestLaunches = () => {
     axios({
       url: 'https://api.spacexdata.com/v3/launches/latest',
@@ -54,7 +57,7 @@ class App extends Component {
     })
   }
 
-  // Past Launches
+  // Axios call for Past Launches Data
   rocketSelectionHandlerPastLaunches = () => {
     axios({
       url: 'https://api.spacexdata.com/v3/launches/past',
@@ -71,7 +74,7 @@ class App extends Component {
     })
   }
 
-  // Upcoming Launches
+  // Axios call for Upcoming Launches Data
   rocketSelectionHandlerUpcomingLaunches = () => {
     axios({
       url: 'https://api.spacexdata.com/v3/launches/upcoming',
@@ -94,22 +97,23 @@ class App extends Component {
         <div className='page1' id='mainLink'>
           <h1>SPACE X ROCKET PORTFOLIO</h1>
           <main className='mainOptions wrapper'>
-
               <div className="firstOptionParent"><button
-                className="firstOption tabindex='0'"
+                className="firstOption"
+                tabindex="0"
                 onClick={() => { this.rocketSelectionHandlerLatestLaunches() } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
 
               <div><button
-              className="secondOption tabindex='0'"
+              className="secondOption"
+              tabindex="0"
               onClick={() => {this.rocketSelectionHandlerPastLaunches() } }>
                 PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
 
               <div><button
-              className="thirdOption tabindex='0'"
+              className="thirdOption"
+              tabindex="0"
               onClick={() => {this.rocketSelectionHandlerUpcomingLaunches()}}>
                 UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
-
           </main>
         </div>
 
@@ -145,15 +149,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Include accessibility
-// Try to add ternary operator for empty details for flights such as 104
-
-// Add google fonts
-// fix sizes of the rocket cards
-
-// Link is bursting out in page 2
-
-// Comment the code
-// Each child should have unique index
-// check the console for errors

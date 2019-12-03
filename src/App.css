@@ -21,6 +21,8 @@ html {
   width:80%;
   margin:0 auto;
 }
+
+/* --------------------------------Page 1 Start-------------------------------- */
 .page1 {
   min-height:100vh;
   background-image: url('./assets/backgroundImagePage1.jpg');
@@ -46,9 +48,6 @@ h1 {
   padding-top:100px;
 }
 
-a:focus {
-  border: 1px solid red;
-}
 
 .firstOption,
 .secondOption,
@@ -82,24 +81,29 @@ a:focus {
   background-position: center;
   color:white;
 }
+/* --------------------------------Page 1 End---------------------------------- */
 
-
-/* Page2 Edits */
+/* --------------------------------Page 2 Start-------------------------------- */
 .page2 {
   background-color:#0e1111;
   position:relative
 }
 
-i {
+.firstRowRocketList .rocketHomeButton {
   position:fixed;
   border-radius: 70px;
-  padding:15px;
+  padding:10px;
   font-size:3.2rem;
   background-color:#f0386b;
   color:white;
   bottom: 45px;
   right: 40px;
+
+}
+
+.firstRowRocketList .rocketHomeButton:hover {
   transform: rotate(-45deg);
+  transform: scale(1.1);
 }
 
 h2 {
@@ -123,6 +127,7 @@ h2 {
   border:0;
   padding:0;
   text-decoration: none;
+  display: block;
 }
 
 .rocketsList {
@@ -159,15 +164,12 @@ h2 {
 
 .missionName {
   background-color: #ff5a5f;
-  /* color:white; */
   display:flex;
   flex-direction: column;
   align-items: stretch;
 }
 
 .missionName p:nth-child(2) {
-  /* margin-top:30px; */
-  /* padding-top:10px; */
   font-size:1.3rem;
 }
 
@@ -186,8 +188,11 @@ h2 {
 .missionStatus p:nth-child(1)  {
   font-weight: 900;
 }
+/* --------------------------------Page 2 Start-------------------------------- */
 
-/* Page3 Edits */
+
+
+/* --------------------------------Page 3 Start-------------------------------- */
 .page3 {
   background-color:lightseagreen;
   color:darkmagenta;
@@ -275,7 +280,7 @@ h2 {
   transition:all 0.35s ease-in-out;
 }
 
-/* Footer */
+/* --------------------------------Footer Start-------------------------------- */
 footer {
   background-color:#111;
   color:white;
@@ -284,9 +289,12 @@ footer {
   padding:10px 0px;
   font-weight: 700;
 }
+/* --------------------------------Footer End-------------------------------- */
+
+/* --------------------------------Page 3 End-------------------------------- */
 
 
-/* Media Query */
+/* --------------------------------Media Query Start-------------------------------- */
 @media(max-width: 550px){
   h1 {
     font-size:3.5rem;
@@ -329,3 +337,4 @@ footer {
   width:auto;
   }
 }
+/* --------------------------------Media Query End-------------------------------- */
