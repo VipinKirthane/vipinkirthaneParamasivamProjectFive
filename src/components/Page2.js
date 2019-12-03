@@ -4,6 +4,46 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 class Page2 extends Component {
 
+    // Latest Launches
+    rocketSelectionHandlerLatestLaunches = () => {
+        axios({
+            url: 'https://api.spacexdata.com/v3/launches/latest',
+            method: 'GET',
+            dataResponse: 'json'
+        }).then((response) => {
+            this.setState({
+                rockets: response.data,
+            })
+        });
+    }
+
+    // Past Launches
+    rocketSelectionHandlerPastLaunches = () => {
+        axios({
+            url: 'https://api.spacexdata.com/v3/launches/past',
+            method: 'GET',
+            dataResponse: 'json'
+        }).then((response) => {
+            this.setState({
+                rockets: response.data,
+            })
+        });
+    }
+
+    // Upcoming Launches
+    rocketSelectionHandlerUpcomingLaunches = () => {
+        axios({
+            url: 'https://api.spacexdata.com/v3/launches/upcoming',
+            method: 'GET',
+            dataResponse: 'json'
+        }).then((response) => {
+            this.setState({
+                rockets: response.data,
+            })
+        });
+    }
+
+
     render () {
         return (
             <section className='page2' id='page2Link'>
@@ -27,7 +67,7 @@ class Page2 extends Component {
                                             className="rocket1Button tabindex='0'"
                                             onClick = {() => {this.props.selectRocket(rocket); this.props.revealPage3()}}
                                         >
-
+                                            {/* <a  > */}
                                             <div className="rocketsList">
                                                     <div className='topHalf'>
                                                         <h4 className='flightNumber topHalf'>Rocket Number</h4>
@@ -43,8 +83,8 @@ class Page2 extends Component {
 
                                                     </div>
                                                 </div>
+                                            {/* </a> */}
                                         </Link>
-
                                         <Link
                                             activeClass='active'
                                             to='mainLink'
@@ -56,7 +96,7 @@ class Page2 extends Component {
                                             className="rocket1Button tabindex='0'"
                                             onClick={() => { this.props.selectRocket(rocket); this.props.revealPage3() }}
                                         >
-                                            <i className="fas fa-rocket tabindex='0'"></i>
+                                            <i class="fas fa-rocket tabindex='0'"></i>
                                         </Link>
                                     </div>
                                 )

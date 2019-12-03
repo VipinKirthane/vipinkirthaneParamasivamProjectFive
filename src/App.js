@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import { Link, animateScroll as scroll } from "react-scroll";
-import Page2 from './Page2';
-import Page3 from './Page3';
+import Page2 from './components/Page2';
+import Page3 from './components/Page3';
 import './App.css';
 
 class App extends Component {
@@ -96,54 +95,21 @@ class App extends Component {
           <h1>Space X Rocket Portfolio</h1>
           <main className='mainOptions wrapper'>
 
-            {/* Link for smooth scroll */}
-            {/* <Link
-              activeClass="active"
-              to="page2Link"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-            > */}
-            {/* <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}> */}
               <div className="firstOptionParent"><button
                 className="firstOption tabindex='0'"
                 onClick={() => { this.rocketSelectionHandlerLatestLaunches() } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
-            {/* </Animated> */}
-            {/* </Link> */}
 
-
-            {/* Link for smooth scroll */}
-            {/* <Link
-              activeClass="active"
-              to="page2Link"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-            > */}
               <div><button
               className="secondOption tabindex='0'"
               onClick={() => {this.rocketSelectionHandlerPastLaunches() } }>
                 PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
-            {/* </Link> */}
 
-
-            {/* Link for smooth scroll */}
-            {/* <Link
-              activeClass="active"
-              to="page2Link"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-            > */}
               <div><button
               className="thirdOption tabindex='0'"
               onClick={() => {this.rocketSelectionHandlerUpcomingLaunches()}}>
                 UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
-            {/* </Link> */}
+
           </main>
         </div>
 
@@ -181,14 +147,13 @@ class App extends Component {
 export default App;
 
 // Include accessibility
-// Create arrow to move to top
 // Include placeholder image for missing video in upcoming launches
+// Put things in the folder
 
 // Add google fonts
 // fix sizes of the rocket cards
 
 // Link is bursting out in page 2
-// see if axios call is required in page2.js
 
 // Comment the code
 // Try to add ternary operator for empty details for flights such as 104
