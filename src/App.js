@@ -180,16 +180,16 @@ class App extends Component {
 
 export default App;
 
-// Make it responsive
 // Include accessibility
 // Include placeholder image for missing video in upcoming launches
 
 // Add google fonts
 // fix sizes of the rocket cards
 
-// Each child should have unique index
 // Link is bursting out in page 2
-// Try to add ternary operator for empty details for flights such as 104
 // see if axios call is required in page2.js
+
 // Comment the code
+// Try to add ternary operator for empty details for flights such as 104
+// Each child should have unique index
 // check the console for errors

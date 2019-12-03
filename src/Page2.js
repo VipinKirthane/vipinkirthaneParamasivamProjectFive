@@ -67,7 +67,7 @@ class Page2 extends Component {
                                         onClick = {() => {this.props.selectRocket(rocket); this.props.revealPage3()}}
                                     >
                                         {/* <a  > */}
-                                            <div className='rocket1'>
+                                            <div className='rocketsList'>
                                                 <div className='topHalf'>
                                                     <h4 className='flightNumber topHalf'>Flight Number</h4>
                                                     <p>{flight_number}</p>
