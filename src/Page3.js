@@ -5,7 +5,7 @@ class Page3 extends Component {
 
     render () {
         // rocket details
-        const { flight_number, details, launch_year, mission_name, launch_success, rocket  } = this.props.rocket;
+        const { flight_number, details, launch_year, mission_name, launch_success } = this.props.rocket;
         // rocket image and image
         let image, video;
         if(this.props.rocket.links !== undefined){
@@ -25,7 +25,8 @@ class Page3 extends Component {
                     <div className="page3Halves">
                         <div className="leftHalfPage3">
                             <div className="rocketImage">
-                                {image !== undefined ? <img src={image} alt="Image of rocket" /> : <img src="./assets/imageNotFound.jpg" alt="" />}
+                                {/* Left alt text empty for imageNotFound.jpg because console said it's redundant */}
+                                {image !== undefined ? <img src={image} alt="A rocket in the frame" /> : <img src="./assets/imageNotFound.jpg" alt="" />}
 
                             </div>
                         </div>
@@ -34,22 +35,17 @@ class Page3 extends Component {
                             <p><span className="page3FlightNumber">Flight Number: </span>{flight_number}</p>
                             <p><span className="page3MissionName">Mission Name: </span>{mission_name}</p>
 
+                            <p><span className="page3AnotherStuff">Launch Year: </span>{launch_year}</p>
                             <p><span className="page3StatusOfMission">Status of Mission: </span>{this.props.launchType !== 'upcoming' ? <span>{launch_success ? "Success" : "Failure"}</span> : <span>Not Applicable</span>}</p>
 
-                            <p><span className="page3RocketType">Details </span>{details}</p>
-                            <p><span className="page3AnotherStuff">Launch Year: </span>{launch_year}</p>
+                            <p><span className="page3RocketType">Details: </span>{details}</p>
                             {/* <p><span className="page3NameSomething">Name something:</span>{rocket.rocket_id}</p> */}
-                            <p><span className="page3FlightNumber">Flight Number: </span>Lorem, ipsum.</p>
-                            <p><span className="page3MissionName">Mission Name: </span>Lorem, ipsum.</p>
-                            <p><span className="page3StatusOfMission">Status of Mission: </span>Lorem, ipsum dolor.</p>
-                            <p><span className="page3RocketType">Rocket Type: </span>Lorem, ipsum dolor.</p>
-                            <p><span className="page3AnotherStuff">another stuff: </span>Lorem, ipsum dolor.</p>
-                            <p><span className="page3NameSomething">Name something: </span>Lorem ipsum dolor sit.</p>
                         </div>
                     </div>
 
 
                 </div>
+                <footer>Copyright © Vipin Kirthane 2019</footer>
             </section>
         )
     }

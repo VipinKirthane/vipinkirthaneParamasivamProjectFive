@@ -236,3 +236,43 @@ h2 {
   transform:scale(1.05);
   transition:all 0.35s ease-in-out;
 }
+
+/* Footer */
+footer {
+  background-color:#111;
+  color:white;
+  text-align: center;
+  font-size:1.8rem;
+  padding:10px 0px;
+  font-weight: 700;
+}
+
+@media(max-width: 550px){
+  h1 {
+    font-size:3.5rem;
+  }
+}
+
+@media(max-width: 800px) {
+  .page3Halves {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .rightHalfPage3 {
+    margin-left:0;
+    width:100%;
+  }
+
+  .leftHalfPage3 {
+    width:100%;
+  }
+
+  .topHalfPage3launchVideo {
+  margin-bottom: 20px;
+  display:flex;
+  justify-content: center;
+  width:auto;
+}
+}

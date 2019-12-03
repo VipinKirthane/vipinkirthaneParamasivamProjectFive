@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link, animateScroll as scroll } from "react-scroll";
-// import Page1 from './Page1';
+// import { Link, animateScroll as scroll } from "react-scroll";
 import Page2 from './Page2';
 import Page3 from './Page3';
 import './App.css';
@@ -93,9 +92,9 @@ class App extends Component {
   render () {
     return (
       <div>
-        <div className="page1" id="mainLink">
+        <div className='page1' id='mainLink'>
           <h1>Space X Rocket Portfolio</h1>
-          <main className="mainOptions wrapper">
+          <main className='mainOptions wrapper'>
 
             {/* Link for smooth scroll */}
             {/* <Link
@@ -107,8 +106,8 @@ class App extends Component {
               duration={500}
             > */}
             {/* <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}> */}
-              <div className="firstOptionParent"><button
-                className="firstOption"
+              <div className='firstOptionParent'><button
+                className='firstOption'
                 onClick={() => { this.rocketSelectionHandlerLatestLaunches() } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
             {/* </Animated> */}
@@ -125,7 +124,7 @@ class App extends Component {
               duration={500}
             > */}
               <div><button
-              className="secondOption"
+              className='secondOption'
               onClick={() => {this.rocketSelectionHandlerPastLaunches() } }>
                 PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
             {/* </Link> */}
@@ -141,7 +140,7 @@ class App extends Component {
               duration={500}
             > */}
               <div><button
-              className="thirdOption"
+              className='thirdOption'
               onClick={() => {this.rocketSelectionHandlerUpcomingLaunches()}}>
                 UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
             {/* </Link> */}
@@ -181,4 +180,16 @@ class App extends Component {
 
 export default App;
 
+// Make it responsive
 // Include accessibility
+// Include placeholder image for missing video in upcoming launches
+
+// Add google fonts
+// fix sizes of the rocket cards
+
+// Each child should have unique index
+// Link is bursting out in page 2
+// Try to add ternary operator for empty details for flights such as 104
+// see if axios call is required in page2.js
+// Comment the code
+// check the console for errors
