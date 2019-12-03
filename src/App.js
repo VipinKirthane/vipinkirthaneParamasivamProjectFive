@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link, animateScroll as scroll } from "react-scroll";
-import { Animated } from "react-animated-css";
 // import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
@@ -52,9 +51,10 @@ class App extends Component {
       }, () => { this.setState({
         launchType: 'latest'
       }); this.revealPage2() })
+    }).catch ( () => {
+      alert('Network Error! Please Reload Page')
     })
   }
-
 
   // Past Launches
   rocketSelectionHandlerPastLaunches = () => {
@@ -68,6 +68,8 @@ class App extends Component {
       }, () => { this.setState({
         launchType: 'past'
       }) ; this.revealPage2() })
+    }).catch ( () => {
+      alert('Network Error! Please Reload page');
     })
   }
 
@@ -83,6 +85,8 @@ class App extends Component {
       }, () => { this.setState({
         launchType: 'upcoming'
       }) ;this.revealPage2() })
+    }).catch ( () => {
+      alert('Network Error! Please Reload Page');
     })
   }
 
@@ -103,7 +107,7 @@ class App extends Component {
               duration={500}
             > */}
             {/* <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}> */}
-              <div className="firstOptionParent animated bounce"><button
+              <div className="firstOptionParent"><button
                 className="firstOption"
                 onClick={() => { this.rocketSelectionHandlerLatestLaunches() } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
@@ -177,5 +181,4 @@ class App extends Component {
 
 export default App;
 
-// Include error handling
 // Include accessibility

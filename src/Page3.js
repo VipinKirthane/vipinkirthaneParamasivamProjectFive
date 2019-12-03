@@ -25,7 +25,7 @@ class Page3 extends Component {
                     <div className="page3Halves">
                         <div className="leftHalfPage3">
                             <div className="rocketImage">
-                                {image !== undefined ? <img src={image} alt="Image of rocket" /> : <img src="./assets/latestLaunches.gif" alt="" />}
+                                {image !== undefined ? <img src={image} alt="Image of rocket" /> : <img src="./assets/imageNotFound.jpg" alt="" />}
 
                             </div>
                         </div>
