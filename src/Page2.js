@@ -63,11 +63,11 @@ class Page2 extends Component {
                                         offset={0}
                                         duration={500}
                                         href='#page3Link'
-                                        className='rocket1Button'
+                                        className="rocket1Button tabindex='0'"
                                         onClick = {() => {this.props.selectRocket(rocket); this.props.revealPage3()}}
                                     >
                                         {/* <a  > */}
-                                            <div className='rocketsList'>
+                                        <div className="rocketsList">
                                                 <div className='topHalf'>
                                                     <h4 className='flightNumber topHalf'>Flight Number</h4>
                                                     <p>{flight_number}</p>

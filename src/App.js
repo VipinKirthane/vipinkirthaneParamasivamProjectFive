@@ -106,8 +106,8 @@ class App extends Component {
               duration={500}
             > */}
             {/* <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}> */}
-              <div className='firstOptionParent'><button
-                className='firstOption'
+              <div className="firstOptionParent"><button
+                className="firstOption tabindex='0'"
                 onClick={() => { this.rocketSelectionHandlerLatestLaunches() } }>
                 LATEST LAUNCHES{this.state.rockets.launch_year}</button></div>
             {/* </Animated> */}
@@ -124,7 +124,7 @@ class App extends Component {
               duration={500}
             > */}
               <div><button
-              className='secondOption'
+              className="secondOption tabindex='0'"
               onClick={() => {this.rocketSelectionHandlerPastLaunches() } }>
                 PAST LAUNCHES{this.state.rockets.rocket_id}</button></div>
             {/* </Link> */}
@@ -140,7 +140,7 @@ class App extends Component {
               duration={500}
             > */}
               <div><button
-              className='thirdOption'
+              className="thirdOption tabindex='0'"
               onClick={() => {this.rocketSelectionHandlerUpcomingLaunches()}}>
                 UPCOMING LAUNCHES{this.state.rockets.mission_name}</button></div>
             {/* </Link> */}
@@ -181,6 +181,7 @@ class App extends Component {
 export default App;
 
 // Include accessibility
+// Create arrow to move to top
 // Include placeholder image for missing video in upcoming launches
 
 // Add google fonts
