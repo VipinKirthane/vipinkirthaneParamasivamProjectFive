@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// Package for smooth scroll
 import { Link } from "react-scroll";
 
 class Page2 extends Component {
@@ -8,6 +9,7 @@ class Page2 extends Component {
                 <div className='wrapper'>
                     <h2>CHOOSE A ROCKET OF INTEREST</h2>
                     <div className='firstRowRocketList'>
+                        {/* Rocket Floating Home Button */}
                         <Link
                             activeClass='active'
                             to='mainLink'

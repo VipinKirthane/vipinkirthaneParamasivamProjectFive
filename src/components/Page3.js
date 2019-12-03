@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// Package for embedding video
 import ReactPlayer from 'react-player';
 
 class Page3 extends Component {
@@ -21,18 +22,16 @@ class Page3 extends Component {
                     <div className="topHalfPage3launchVideo tabindex='0'">
                         {
                             video !== undefined && video !== null
-                                ? <ReactPlayer url={video} playing={false} volume={0} width='100%' className="tabIndex='0'" control='true' />
+                                ? <ReactPlayer url={video} playing={false} volume={0} width='100%' className="videoPlayerBox" tabIndex='0' control='true' />
                                 : <img className="videoFallback" src="./assets/videoFallback.png" alt="Video not found" />
                         }
                     </div>
-
 
                     <div className="page3Halves">
                         {/* Image element of the selected rocket */}
                         <div className="leftHalfPage3">
                             <div className="rocketImage tabindex='0'">
-                                {/* The alt text of imageNotFound.jpg is empty because console said it's redundant */}
-                                {image !== undefined ? <img src={image} alt="A rocket in the frame" /> : <img src="./assets/imageNotFound.jpg" alt="" />}
+                                {image !== undefined ? <img src={image} alt="A rocket in the frame" /> : <img src="./assets/imageNotFound.jpg" alt="Missing image" />}
                             </div>
                         </div>
 
@@ -41,7 +40,7 @@ class Page3 extends Component {
                             <p><span className="page3FlightNumber">Rocket Number: </span>{flight_number}</p>
                             <p><span className="page3MissionName">Mission Name: </span>{mission_name}</p>
                             <p><span className="page3AnotherStuff">Launch Year: </span>{launch_year}</p>
-                            <p><span className="page3StatusOfMission">Status of Mission: </span>{this.props.launchType !== 'upcoming' ? <span>{launch_success ? "Success" : "Failure"}</span> : <span className="notApplicable">Not Applicable</span>}</p>
+                            <p><span className="page3StatusOfMission">Status of Mission: </span>{this.props.launchType !== 'upcoming' ? <span className="successOrFailure">{launch_success ? "Success" : "Failure"}</span> : <span className= "notApplicable">Not Applicable</span>}</p>
                             <p><span className="page3RocketType">Details: </span>{details}</p>
                         </div>
                     </div>

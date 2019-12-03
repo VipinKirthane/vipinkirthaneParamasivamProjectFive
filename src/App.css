@@ -26,6 +26,7 @@ html {
 .page1 {
   min-height:100vh;
   background-image: url('./assets/backgroundImagePage1.jpg');
+  background-color:#0e1111;
   background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
@@ -48,6 +49,20 @@ h1 {
   padding-top:100px;
 }
 
+.firstOption {
+  background-image: url("./assets/latestLaunches.gif");
+
+}
+
+.secondOption {
+  background-image: url("./assets/pastLaunches.gif");
+  color:white;
+}
+
+.thirdOption {
+  background-image: url("./assets/upcomingRocket.gif");
+  color:white;
+}
 
 .firstOption,
 .secondOption,
@@ -63,24 +78,9 @@ h1 {
   font-size:2.2rem;
   font-weight: 900;
   margin-bottom:100px;
-}
-
-.firstOption {
-  background-image: url("./assets/latestLaunches.gif");
   background-position: center;
 }
 
-.secondOption {
-  background-image: url("./assets/pastLaunches.gif");
-  background-position: center;
-  color:white;
-}
-
-.thirdOption {
-  background-image: url("./assets/upcomingRocket.gif");
-  background-position: center;
-  color:white;
-}
 /* --------------------------------Page 1 End---------------------------------- */
 
 /* --------------------------------Page 2 Start-------------------------------- */
@@ -110,7 +110,7 @@ h2 {
   margin:0;
   color:white;
   text-align: center;
-  font-size:3rem;
+  font-size:3.8rem;
   padding-top:60px;
   padding-bottom:40px;
 }
@@ -194,17 +194,17 @@ h2 {
 
 /* --------------------------------Page 3 Start-------------------------------- */
 .page3 {
-  background-color:lightseagreen;
-  color:darkmagenta;
+  background-color: #087e8b;
+  color:white;
 }
 
 .page3Header {
   margin-top:0;
   padding-top:50px;
-  font-size:3.3rem;
+  font-size:4rem;
   text-align: center;
-  color:black;
-  letter-spacing: 5px;
+  color:white;
+  letter-spacing: 3px;
   margin-bottom:30px;
 }
 
@@ -221,25 +221,28 @@ h2 {
 .rightHalfPage3 {
   width:calc(50% - 10px);
   margin-left:10px;
-  background-color:blanchedalmond;
+  background-color: #f5f5f5;
   font-size:1.8rem;
   padding-left:30px;
   padding-right:30px;
   color:black;
   margin-bottom:20px;
+  border-radius: 3px;
+  box-shadow: 8px 8px #f0386b;
 }
 
-.rightHalfPage3 p {
-  color:crimson;
-}
 
 .rightHalfPage3 span {
   color:black;
   font-weight: 900;
 }
 
-.notApplicable {
-  font-weight: 100;
+span.notApplicable  {
+  font-weight: 400;
+}
+
+span.successOrFailure {
+  font-weight: 400;
 }
 
 .rocketImage {
@@ -295,24 +298,6 @@ footer {
 
 
 /* --------------------------------Media Query Start-------------------------------- */
-@media(max-width: 550px){
-  h1 {
-    font-size:3.5rem;
-  }
-
-  .firstOption,
-  .secondOption,
-  .thirdOption {
-    width:280px;
-  }
-
-  i {
-  font-size:3rem;
-  bottom: 45px;
-  right: 20px;
-  border:1px solid black;
-  }
-}
 
 @media(max-width: 800px) {
   .page3Halves {
@@ -335,6 +320,25 @@ footer {
   display:flex;
   justify-content: center;
   width:auto;
+  }
+}
+
+@media(max-width: 550px){
+  h1,h2,.page3Header {
+    font-size:2.8rem;
+  }
+
+  .firstOption,
+  .secondOption,
+  .thirdOption {
+    width:280px;
+  }
+
+  i {
+  font-size:3rem;
+  bottom: 45px;
+  right: 20px;
+  border:1px solid black;
   }
 }
 /* --------------------------------Media Query End-------------------------------- */
