@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <script src="React%20App_files/23a74f9e1a.js" crossorigin="anonymous"></script><link rel="stylesheet" href="React%20App_files/free.css" media="all">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style>html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #6b6eec, #5456be, #3d3f91, #282a67, #141640);
+  padding-top: 1px;
+}
+
+.search {
+  min-height: 100vh;
+  /* Animate neon flicker */
+}
+
+.search h1 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  letter-spacing: 10px;
+  color: white;
+  margin: 50px auto;
+  margin-bottom: 60px;
+  padding: 20px 0px;
+  width: 70%;
+  border: 5px solid #8ef9f4;
+  border-radius: 20px;
+  text-align: center;
+  animation: flicker 1.5s infinite alternate;
+  background-color: #141640;
+}
+
+@media (max-width: 1200px) {
+  .search h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .search h1 {
+    width: 75%;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .search h1 {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+
+.search label {
+  visibility: hidden;
+}
+
+.search h3 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: 3px 3px #141640;
+  color: #8ef9f4;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+  .search h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .search h3 {
+    font-size: 2.3rem;
+  }
+}
+
+.search h1:focus {
+  outline: none;
+}
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: -0.2rem -0.2rem 1rem #8ef9f4, 0.2rem 0.2rem 1rem #8ef9f4, 0 0 2rem #6b6eec, 0 0 4rem #6b6eec, 0 0 6rem #6b6eec, 0 0 8rem #6b6eec, 0 0 10rem #6b6eec;
+    box-shadow: 0 0 0.5rem #8ef9f4, inset 0 0 0.5rem #8ef9f4, 0 0 2rem #141640, inset 0 0 2rem #141640, 0 0 4rem #141640, inset 0 0 4rem #141640;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.search .movieListing {
+  font-size: 1.8rem;
+  list-style-type: none;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.search .movieListing:hover {
+  color: white;
+  background-color: rgba(107, 110, 236, 0.4);
+  transition: ease-in-out 0.2s;
+  border-radius: 5px;
+}
+
+.searchBar {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .searchBar {
+    width: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  .searchBar {
+    width: 100%;
+  }
+}
+
+.searchInput {
+  padding: 15px;
+  height: 60px;
+  margin-bottom: 2px;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  width: 100%;
+  border: none;
+  box-shadow: 4px 3px 3px darkslateblue;
+  background-color: #141640;
+  color: #8ef9f4;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 10px #8ef9f4;
+}
+
+@media (max-width: 900px) {
+  .searchInput {
+    font-size: 1.5rem;
+  }
+}
+
+.searchIcon {
+  color: #8ef9f4;
+  opacity: 40%;
+  font-size: 2.3rem;
+  position: absolute;
+  right: 15px;
+  top: 38px;
+  bottom: 0px;
+}
+
+.movieResults {
+  display: flex;
+  border-radius: 15px;
+  background-color: #141640;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.movieResultsPartOne {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 10px;
+  width: 100%;
+}
+
+.movieResultsPartOne .movieListing {
+  font-size: 1.8rem;
+  list-style-type: none;
+  padding: 10px 0;
+  padding-left: 10px;
+  color: #8ef9f4;
+  text-align: left;
+  border-bottom: 1px solid rgba(142, 249, 244, 0.1);
+  width: 100%;
+}
+
+.movieResultsPartOne .movieListing:focus {
+  box-shadow: 0 0 10px #8ef9f4;
+}
+
+@media (max-width: 400px) {
+  .movieResultsPartOne .movieListing {
+    font-size: 1.7rem;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+body {
+  background: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+li,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Kanit", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: #141640;
+  color: #8ef9f4;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skipLink:focus {
+  left: 0;
+  box-shadow: 0 0 20px #8ef9f4;
+  outline: none;
+}
+</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="main"><ul class="search"><div class="wrapper"><h1>GIF ME A MOVIE!</h1><h3>A movie theatre for those who don't have time to watch a full movie</h3><div class="searchBar"><label for="userInput">Search a movie title</label><input type="text" id="userInput" class="searchInput" placeholder="Search for a movie"><i class="fas fa-search searchIcon" aria-hidden="true"></i></div></div><div class="wrapper"><div class="searchBar"><div class="movieResults" id="mainContent"><ul class="movieResultsPartOne"></ul></div></div></div><ul></ul><div class="movieTagline"></div></ul></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="React%20App_files/bundle.js"></script><script src="React%20App_files/1.js"></script><script src="React%20App_files/main_002.js"></script><script src="React%20App_files/main.js"></script>
+
+</body></html>
