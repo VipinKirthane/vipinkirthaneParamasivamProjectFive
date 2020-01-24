@@ -4,10 +4,10 @@ import ReactPlayer from 'react-player';
 
 class Page3 extends Component {
 
-    render () {
+    render() {
         const { flight_number, details, launch_year, mission_name, launch_success } = this.props.rocket;
         let image, video;
-        if(this.props.rocket.links !== undefined){
+        if (this.props.rocket.links !== undefined) {
             // Storing in a variable because these objects are nested
             image = this.props.rocket.links.flickr_images[0];
             video = this.props.rocket.links.video_link;
@@ -40,12 +40,12 @@ class Page3 extends Component {
                             <p><span className="page3FlightNumber">Rocket Number: </span>{flight_number}</p>
                             <p><span className="page3MissionName">Mission Name: </span>{mission_name}</p>
                             <p><span className="page3AnotherStuff">Launch Year: </span>{launch_year}</p>
-                            <p><span className="page3StatusOfMission">Status of Mission: </span>{this.props.launchType !== 'upcoming' ? <span className="successOrFailure">{launch_success ? "Success" : "Failure"}</span> : <span className= "notApplicable">Not Applicable</span>}</p>
+                            <p><span className="page3StatusOfMission">Status of Mission: </span>{this.props.launchType !== 'upcoming' ? <span className="successOrFailure">{launch_success ? "Success" : "Failure"}</span> : <span className="notApplicable">Not Applicable</span>}</p>
                             <p><span className="page3RocketType">Details: </span>{details}</p>
                         </div>
                     </div>
                 </div>
-                <footer>Copyright © Vipin Kirthane 2019</footer>
+                <footer>Copyright © Vipin Kirthane 2020</footer>
             </section>
         )
     }
